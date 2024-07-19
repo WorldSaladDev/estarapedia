@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // HTML content for tools section
     const toolsSectionHTML = `
         <div class="tools_section">
-            <img src="images/other/estarapedia.png" alt="Estarapedia Logo">
+            <img src="../images/other/estarapedia.png" alt="Estarapedia Logo">
             <nav>
                 <h1>Tools</h1>
                 <ul>
