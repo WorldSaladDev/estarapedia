@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const footerHTML = `
         <div class="footer">
             <hr>
-            <p>Information accurate as of 100YE. The Estarapedia and the text within are owned by the Ephelion Company.</p>
+            <p>Information accurate as of 100YE.</p>
+            <p>© 2024 Mason Engevold. All rights reserved.</p>
         </div>
     `;
 
