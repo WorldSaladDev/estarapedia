@@ -1,0 +1,103 @@
+
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+}
+
+.meta-info {
+  color: purple;
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Make the container take up the full height of the viewport */
+}
+
+.content_section {
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Ensure relative positioning for the container */
+
+  .body {
+    p {
+      margin: 1em 0 1em 0;
+    }
+
+    h3 {
+      color: #656565;
+    }
+
+    img {
+      max-inline-size: 75%;
+    }
+
+    margin: 5em;
+    text-align: center;
+  }
+}
+
+#suggested-links-table {
+  margin-left: auto;
+  margin-right: auto;
+
+  th {
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 20px;
+  }
+  
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: purple;
+    text-decoration: underline;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s; /* Add transition for opacity change over 3 seconds */
+}
+
+.index-section h2 {
+  margin: 0;
+  text-align: left;
+}
+
+.index-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.index-item {
+  flex: 1 1 calc(25% - 10px); /* Adjust for gap */
+  box-sizing: border-box;
+  min-width: 150px; /* Minimum width for each item */
+  text-align: left;
+}

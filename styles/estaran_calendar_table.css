@@ -1,0 +1,67 @@
+.calendar-month-row {
+  display: flex;
+  margin: 0 10px;
+  justify-content: center;
+}
+
+/* table styles */
+table.month-table {
+  width: 200px;
+  margin: 10px; 
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+th.month-header {
+  background-color: #efe8d2; 
+  color: black;
+}
+tbody.calendar-dates {
+  background-color: #efe8d2; 
+  color: black;
+  padding: 20px; 
+  text-align: center;
+}
+
+/* hover text effects */
+.month-genesis:hover .hover-info {
+  display: block;
+}
+
+.month-acies:hover .hover-info {
+  display: block;
+}
+
+.month-uku:hover .hover-info {
+  display: block;
+}
+
+.month-dodu:hover .hover-info {
+  display: block;
+}
+
+.month-baku:hover .hover-info {
+  display: block;
+}
+
+.month-ceni:hover .hover-info {
+  display: block;
+}
+
+.month-yati:hover .hover-info {
+  display: block;
+}
+
+.month-seki:hover .hover-info {
+  display: block;
+}
+
+.month-ephelion:hover .hover-info {
+  display: block;
+}
+
+.month-terminus:hover .hover-info {
+  display: block;
+}

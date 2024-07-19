@@ -1,0 +1,216 @@
+
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  background-color: rgb(145, 120, 68);
+}
+
+hr {
+  border: 1px solid #909090; /* Set border to create the line */
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Make the container take up the full height of the viewport */
+  padding: 0px 100px 0px 100px;
+}
+
+.meta-info {
+  color: purple;
+  font-style: italic;
+}
+
+.subtext {
+  color: gray;
+  font-size: 10pt;
+}
+
+.sidebar {
+  width: 200px;
+  background-size: cover;
+  padding: 20px;
+  border-right: 1px solid #333;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: sticky; /* Sticky position to scroll with the screen */
+  top: 0; /* Stick to the top of the viewport */
+  background-image: url('../images/backgrounds/paper.png');
+  background-size: cover;
+  box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.6); /* Horizontal offset, vertical offset, blur radius, color */
+
+  .toc_section {
+    flex: 9;
+
+    h1 {
+      padding-top: 2em;
+      text-align: center;
+    }
+  
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    ul li a {
+      text-decoration: none;
+      color: blue;
+    }
+    
+    ul li a:hover {
+      text-decoration: underline;
+      color: purple;
+    }
+  
+    li .toc-heading {
+      padding-top: 1em;
+    }
+  
+    li .toc-subheading {
+      padding: 0 0 5px 2ch;
+    }
+  }
+
+  .tools_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Ensures child elements are stacked vertically */
+  
+    h1 {
+      padding-top: 2em;
+      text-align: center; /* Center-align the header */
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+  }
+  
+    ul li a {
+      text-decoration: none;
+      color: blue;
+    }
+  
+    ul li a:hover {
+      text-decoration: underline;
+      color: purple;
+    }
+  }
+
+}
+
+.content_section {
+  padding: 20px;
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Ensure relative positioning for the container */
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+  background-image: url('../images/backgrounds/paper.png');
+  background-size: cover;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.6); /* Horizontal offset, vertical offset, blur radius, color */
+
+  .body {
+    p {
+      margin: 0 0 1em 0;
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    img {
+      max-inline-size: 75%;
+      text-align: center;
+    }
+  }
+
+  .image-container {
+    padding: 5px; /* Optional padding around the image */
+    text-align: center; /* Center align the content */
+  }
+
+  .introduction {
+    display: flex;
+    flex-direction: row;
+  
+    .info-box {
+      background-color: #efe8d2;
+      padding: 10px; /* Padding around the content inside the info box */
+      float: right; /* Float the info box to the right */
+      margin-top: 20px; /* Adjust as needed to control vertical positioning */
+      margin-left: 20px; /* Adjust as needed to control horizontal positioning */
+      flex: 1;
+      border: 1px solid black; 
+  
+      h1 {
+        text-align: center;
+        font-size: 12pt;
+        color:black;
+        margin: 0 0 10px 0; /* Add some margin for spacing */
+      }
+  
+      hr {
+        border: 1px solid black; /* Set border to create the line */
+      }
+  
+      p {
+        color: black;
+        text-align: center;
+      }
+  
+      p.infobox-image-description {
+        font-style: italic;
+      }
+    }
+  
+    .introduction-article {
+      flex: 3;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: purple;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+
+.item-statblock {
+  border: 2px solid #000;
+  padding: 10px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  width: 300px;
+}
+
+.item-statblock h2 {
+  margin-top: 0;
+}
+
+.item-statblock button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'HamshiHandwritten';
+    src: url('../fonts/HamshiHandwritten.ttf') format('truetype');
+}
+
+.hamshi {
+    font-family: 'HamshiHandwritten', sans-serif;
+    font-size: 48px;
+}
