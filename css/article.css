@@ -109,7 +109,11 @@ hr {
       color: purple;
     }
   }
+}
 
+hr {
+  clear: both;
+  margin-top: 20px; /* Adjust the space above the horizontal rule as needed */
 }
 
 .content_section {
@@ -141,6 +145,26 @@ hr {
   .image-container {
     padding: 5px; /* Optional padding around the image */
     text-align: center; /* Center align the content */
+  }
+
+  .article-image-container {
+    float: right;
+    margin: 20px 0 20px 20px;
+    width: 800px; /* Adjust the width of the image container */
+    border: 1px solid black;
+  }
+  
+  .article-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .article-image-container figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    border-top: 1px solid black;
   }
 
   .introduction {
