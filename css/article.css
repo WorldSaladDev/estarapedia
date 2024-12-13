@@ -1,6 +1,5 @@
 
-/* Reset default browser styles */
-body, h1, h2, h3, p, ul, li {
+* {
   margin: 0;
   padding: 0;
 }
@@ -10,216 +9,197 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  background-color: rgb(145, 120, 68);
-}
-
-hr {
-  border: 1px solid #909090; /* Set border to create the line */
-  margin: 20px 0; /* Add some margin for spacing */
-}
-
-.container {
+  min-height: 100vh;
+  overflow-y: scroll; /* Always show vertical scrollbar */
   display: flex;
-  height: 100vh; /* Make the container take up the full height of the viewport */
-  padding: 0px 100px 0px 100px;
+  text-align: center;
+  justify-content: center;
+  background-image: url('../resources/backgrounds/paper.png'); /* Dark background for left and right */
+  background-size: 12.5%;
+  padding-right: 17px; /* Account for scrollbar width */
 }
 
-.meta-info {
-  color: purple;
-  font-style: italic;
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Ensure the outer container takes full width */
+  max-width: 1500px; /* Optionally limit the maximum width */
+  background-color: rgb(234, 218, 206);
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.subtext {
-  color: gray;
-  font-size: 10pt;
-}
-
-.sidebar {
-  width: 200px;
-  background-size: cover;
-  padding: 20px;
-  border-right: 1px solid #333;
-  flex: 1;
+.article-container {
+  flex: 7;
   display: flex;
   flex-direction: column;
-  position: sticky; /* Sticky position to scroll with the screen */
-  top: 0; /* Stick to the top of the viewport */
-  background-image: url('../images/backgrounds/paper.png');
-  background-size: cover;
-  box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.6); /* Horizontal offset, vertical offset, blur radius, color */
-
-  .toc_section {
-    flex: 9;
-
-    h1 {
-      padding-top: 2em;
-      text-align: center;
-    }
+  text-align: left;
+  background-color: rgb(234, 218, 206); /* Background of the article container */
+  padding: 30px; /* Optional padding for the content */
+  border-radius: 10px;
+  width: 100%;
   
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    
-    ul li a {
-      text-decoration: none;
-      color: blue;
-    }
-    
-    ul li a:hover {
-      text-decoration: underline;
-      color: purple;
-    }
-  
-    li .toc-heading {
-      padding-top: 1em;
-    }
-  
-    li .toc-subheading {
-      padding: 0 0 5px 2ch;
-    }
-  }
-
-  .tools_section {
-    flex: 1;
-    display: flex;
-    flex-direction: column; /* Ensures child elements are stacked vertically */
-  
-    h1 {
-      padding-top: 2em;
-      text-align: center; /* Center-align the header */
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-  }
-  
-    ul li a {
-      text-decoration: none;
-      color: blue;
-    }
-  
-    ul li a:hover {
-      text-decoration: underline;
-      color: purple;
-    }
-  }
-}
-
-hr {
-  clear: both;
-  margin-top: 20px; /* Adjust the space above the horizontal rule as needed */
-}
-
-.content_section {
-  padding: 20px;
-  flex: 5;
-  display: flex;
-  flex-direction: column;
-  position: relative; /* Ensure relative positioning for the container */
-  overflow-y: auto; /* Add vertical scroll if content overflows */
-  background-image: url('../images/backgrounds/paper.png');
-  background-size: cover;
-  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.6); /* Horizontal offset, vertical offset, blur radius, color */
-
-  .body {
-    p {
-      margin: 0 0 1em 0;
-    }
-
-    h3 {
-      color: #333;
-    }
-
-    img {
-      max-inline-size: 75%;
-      text-align: center;
-    }
-  }
-
-  .image-container {
-    padding: 5px; /* Optional padding around the image */
-    text-align: center; /* Center align the content */
-  }
-
-  .article-image-container {
+  .inline-image-container {
     float: right;
-    margin: 20px 0 20px 20px;
+    margin: 0 0 10px 20px;
     width: 800px; /* Adjust the width of the image container */
     border: 1px solid black;
-  }
-  
-  .article-image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .article-image-container figcaption {
-    text-align: center;
-    font-style: italic;
-    font-size: 0.9em;
-    border-top: 1px solid black;
+    justify-content: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      justify-content: center;
+    }
+
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.9em;
+      border-top: 1px solid black;
+    }
   }
 
-  .introduction {
+  .article-introduction {
     display: flex;
     flex-direction: row;
-  
-    .info-box {
-      background-color: #efe8d2;
-      padding: 10px; /* Padding around the content inside the info box */
-      float: right; /* Float the info box to the right */
-      margin-top: 20px; /* Adjust as needed to control vertical positioning */
-      margin-left: 20px; /* Adjust as needed to control horizontal positioning */
-      flex: 1;
-      border: 1px solid black; 
-  
-      h1 {
-        text-align: center;
-        font-size: 12pt;
-        color:black;
-        margin: 0 0 10px 0; /* Add some margin for spacing */
-      }
-  
-      hr {
-        border: 1px solid black; /* Set border to create the line */
-      }
-  
-      p {
-        color: black;
-        text-align: center;
-      }
-  
-      p.infobox-image-description {
-        font-style: italic;
-      }
-    }
-  
-    .introduction-article {
+
+    .article-summary {
       flex: 3;
     }
+
+    .info-box {
+      background-color: antiquewhite;
+      flex: 1;
+      border: 1px solid black; 
+      text-align: center;
+    }
   }
 
-  a {
-    text-decoration: none;
-    color: blue;
+  .warning-box {
+    background-color: #efe8d2; 
+    padding: 10px; 
+    border: 1px solid black; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+
+    img {
+      width: 30px;
+      height: 30px;
+      padding: 0 10px 0 10px;
+    }
   }
 
-  a:hover {
-    text-decoration: underline;
-    color: purple;
-  }
+  .article-body {
+    h1, h3 {
+      padding-top: 0px;
+    }
 
-  .footer {
-    text-align: center;
+    h2 {
+      padding-top: 30px;
+    }
+
+    p {
+      padding-bottom: 10px;
+    }
+
+    hr {
+      height: 1px;
+      border: none;
+      background-color: gray;
+      margin: 5px 0 5px 0;
+    }
+    hr.invisible {
+      height: 0px;
+      border: none;
+      margin: 0;
+    }
   }
 }
+
+.sidebar-container {
+  width: 200px;
+  flex: 0 0 auto;
+  height: 100vh;
+  background-color: rgb(234, 218, 206);
+  padding: 20px;
+  border-right: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  
+  .sidebar-subcontainer {
+    position: fixed;
+    width: 200px;
+    overflow-y: hidden;
+    
+    .tools_section {
+      flex: 1;
+
+      h1 {
+        padding-top: 0.5em;
+        text-align: center; /* Center-align the header */
+      }
+
+      ul {
+        text-align: left;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: blue;
+      }
+
+      ul li a:hover {
+        text-decoration: underline;
+        color: purple;
+      }
+    }
+
+    .toc_section {
+      flex: 9;
+
+      h1 {
+        padding-top: 0.5em;
+        text-align: center;
+      }
+
+      nav{ 
+
+        ul {
+          text-align: left;
+          list-style: none;
+          padding-left: 0;
+
+          .toc-heading {
+            padding-top: 10 px;
+          }
+  
+          .toc-subheading {
+            text-indent: 2ch;
+          }
+        }
+
+        ul li a {
+          text-decoration: none;
+          color: blue;
+        }
+
+        ul li a:hover {
+          text-decoration: underline;
+          color: purple;
+        }
+      }
+    }
+  }
+}
+
 
 .item-statblock {
   border: 2px solid #000;
@@ -237,4 +217,15 @@ hr {
   margin-top: 10px;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+th.empty, td.empty {
+  border: transparent;
+  background-color: transparent; 
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: #efe8d2; 
 }

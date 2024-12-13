@@ -1,0 +1,25 @@
+.index-section h2 {
+  line-height: 1.2;
+  text-align: left;
+}
+
+.index-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.index-item {
+  flex: 1 1 calc(25% - 10px); /* Adjust for gap */
+  box-sizing: border-box;
+  min-width: 150px; /* Minimum width for each item */
+  text-align: left;
+  margin: 0.25em;
+  p {
+    line-height: 1.2;
+  }
+  hr {
+    border: 0.1px solid #818181; /* Set border to create the line */
+    margin: 10px 0; /* Add some margin for spacing */
+  }
+  margin-bottom: 50px;
+}

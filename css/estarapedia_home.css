@@ -1,103 +1,70 @@
-
-/* Reset default browser styles */
-body, h1, h2, h3, p, ul, li {
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   height: 100%;
 }
 
+/* Ensure the body takes full height and has a scrollbar */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f7f7f7;
-  color: #333;
-  margin: 0;
-}
-
-.meta-info {
-  color: purple;
-  font-style: italic;
-}
-
-.container {
+  min-height: 100vh;
+  overflow-y: scroll; /* Always show vertical scrollbar */
   display: flex;
-  height: 100vh; /* Make the container take up the full height of the viewport */
+  text-align: center;
+  justify-content: center;
+  background-image: url('../resources/backgrounds/paper.png'); /* Dark background for left and right */
+  background-size: 12.5%;
+  padding-right: 17px; /* Account for scrollbar width */
 }
 
-.content_section {
-  padding: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
-  flex: 4;
+.outer-container {
   display: flex;
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgb(234, 218, 206);
   flex-direction: column;
-  position: relative; /* Ensure relative positioning for the container */
-
-  .body {
-    p {
-      margin: 1em 0 1em 0;
-    }
-
-    h3 {
-      color: #656565;
-    }
-
-    img {
-      max-inline-size: 75%;
-    }
-
-    margin: 5em;
-    text-align: center;
-  }
+  padding-top: 1em;
+  padding-bottom: 1em;
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#suggested-links-table {
-  margin-left: auto;
-  margin-right: auto;
-
-  th {
-    color: black;
-    border: 1px solid black;
-    padding: 5px;
-  }
-  
-  td {
-    border: 1px solid black;
-    padding: 20px;
-  }
-  
-  a {
-    color: blue;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: purple;
-    text-decoration: underline;
-  }
+/* Side areas on left and right */
+.side {
+  flex: 1;
+  width: auto;
 }
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 1.5s; /* Add transition for opacity change over 3 seconds */
+/* The container inside will have the main content styling */
+.article-container {
+  flex: 3;
+  background-color: rgb(234, 218, 206); /* Background of the article container */
+  padding: 20px; /* Optional padding for the content */
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 100%;
 }
 
-.index-section h2 {
-  margin: 0;
-  text-align: left;
+/* Article padding */
+.article {
+  padding: 30px 100px 30px 100px;
 }
 
-.index-row {
-  display: flex;
-  flex-wrap: wrap;
+/* Styling for the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
 }
 
-.index-item {
-  flex: 1 1 calc(25% - 10px); /* Adjust for gap */
-  box-sizing: border-box;
-  min-width: 150px; /* Minimum width for each item */
-  text-align: left;
+.grid-item {
+  border: 1px solid #000;
+  background-color: antiquewhite;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.324);
 }

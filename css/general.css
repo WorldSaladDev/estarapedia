@@ -1,0 +1,71 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+li {
+  color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+h1 {
+  font-variant: small-caps;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+}
+
+h2 {
+  font-variant: small-caps;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-variant: small-caps;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.25em;
+}
+
+.subtext {
+  color: gray;
+  font-size: 10pt;
+}
+
+hr {
+  border: 0.1px solid #000000; /* Set border to create the line */
+  clear: both;
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+hr.light-hr {
+  border: 0.1px solid #818181; /* Set border to create the line */
+  clear: both;
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: purple;
+}
+
+a:active {
+  text-decoration: underline;
+  color: rgb(69, 0, 69);
+}
+
+footer p{ 
+  color: gray;
+}

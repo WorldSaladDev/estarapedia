@@ -1,9 +1,18 @@
 @font-face {
-    font-family: 'HamshiHandwritten';
-    src: url('../fonts/HamshiHandwritten.ttf') format('truetype');
+    font-family: 'HamshiModern';
+    src: url('../fonts/HamshiModern.ttf') format('truetype');
 }
 
 .hamshi {
-    font-family: 'HamshiHandwritten', sans-serif;
-    font-size: 48px;
+    font-family: 'HamshiModern', sans-serif;
+    font-size: 36px;
+}
+
+@font-face {
+    font-family: 'Temric';
+    src: url('../fonts/Temric.ttf') format('truetype');
+}
+
+.temric {
+    font-family: 'Temric', sans-serif;
 }
