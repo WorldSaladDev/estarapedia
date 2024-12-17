@@ -70,11 +70,38 @@ body {
     }
 
     .info-box {
-      background-color: antiquewhite;
       flex: 1;
-      border: 1px solid black; 
-      text-align: center;
+      padding: 0 20px 0 20px;
+      
+      img {
+        width: 200px;
+      }
+
+      figcaption {
+        font-style: italic;
+      }
+
+      .info-box-container {
+        padding: 20px;
+        background-color: antiquewhite;
+        border: 1px solid black; 
+        text-align: center;
+        align-items: center;
+      }
+
+      hr {
+        height: 1px;
+        border: none;
+        background-color: rgb(0, 0, 0);
+        margin: 10px 0 10px 0;
+      }
+
+      li {
+        list-style: none;
+        font-style: italic;
+      }
     }
+
   }
 
   .warning-box {

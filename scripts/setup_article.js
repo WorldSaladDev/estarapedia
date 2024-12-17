@@ -69,8 +69,27 @@ function addHorizontalRules() {
     }
 }
 
+function insertFooter() {
+    const footerHTML = `
+        <footer>
+            <hr>
+            <section>
+                <p>Some assets were created using various web tools. More information can be found on the <a href="./credits.html">credits page</a>.</p>
+                <p>© 2024 Mason Engevold. All rights reserved.</p>
+            </section>
+        </footer>
+    `;
+
+    // Select the .article-container div
+    const articleContainer = document.querySelector('.article-container');
+    if (articleContainer) {
+        // Insert the footer before the end of .article-container
+        articleContainer.insertAdjacentHTML('beforeend', footerHTML);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-    //HTML content for tools section
+    // HTML content for tools section
     const toolsSectionHTML = `
         <img src="../../resources/estarapedia_logo_vertical.svg" alt="Estarapedia Logo">
         <div class="tools_section">
@@ -85,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     `;
 
-    //HTML content for table of contents section
+    // HTML content for table of contents section
     const tocSectionHTML = `
         <div class="toc_section" id="toc">
             <nav>
@@ -97,14 +116,14 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     `;
 
-    //insert tools section into sidebar
+    // Insert tools section into sidebar
     const sidebar = document.querySelector('.sidebar-subcontainer');
     sidebar.insertAdjacentHTML('afterbegin', toolsSectionHTML);
 
-    //insert TOC section into sidebar
+    // Insert TOC section into sidebar
     sidebar.insertAdjacentHTML('beforeend', tocSectionHTML);
 
-    //generate table of contents
+    // Generate table of contents
     const toc = document.getElementById('toc').querySelector('ul');
     const headings = document.querySelectorAll('.article-body h2, .article-body h3');
     headings.forEach(function (heading) {
@@ -122,15 +141,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    //setup article title
+    // Setup article title
     const articleTitleHeadings = document.querySelectorAll('.article-title');
     articleTitleHeadings.forEach(function (heading) {
         heading.textContent = document.title;
     });
-    
-    //add <hr> to h2 headings
+
+    // Add <hr> to h2 headings
     addHorizontalRules();
 
-    //insert warning boxes if applicable
+    // Insert warning boxes if applicable
     insertWarningBox();
+
+    // Insert footer
+    insertFooter();
 });
