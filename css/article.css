@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%; /* Ensure the outer container takes full width */
-  max-width: 1500px; /* Optionally limit the maximum width */
+  max-width: 1500px;
   background-color: rgb(234, 218, 206);
   justify-content: flex-start;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -42,7 +42,6 @@ body {
   .inline-image-container {
     float: right;
     margin: 0 0 10px 20px;
-    width: 800px; /* Adjust the width of the image container */
     border: 1px solid black;
     justify-content: center;
     
@@ -139,10 +138,17 @@ body {
       background-color: gray;
       margin: 5px 0 5px 0;
     }
+
     hr.invisible {
       height: 0px;
       border: none;
       margin: 0;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 25px;
+      padding-bottom: 10px;
     }
   }
 }

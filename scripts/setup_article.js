@@ -74,7 +74,7 @@ function insertFooter() {
         <footer>
             <hr>
             <section>
-                <p>Some assets were created using various web tools. More information can be found on the <a href="./credits.html">credits page</a>.</p>
+                <p>Some assets were created using various web tools. More information can be found on the <a href="../misc/credits.html">credits page</a>.</p>
                 <p>© 2024 Mason Engevold. All rights reserved.</p>
             </section>
         </footer>
